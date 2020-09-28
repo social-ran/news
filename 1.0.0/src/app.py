@@ -35,7 +35,7 @@ class News(AppBase):
         browser.find_element_by_xpath('/html/body/div/div/div/div[2]/div[2]').send_keys(context)
         browser.find_element_by_xpath('/html/body/div/div/div/button').click()
 
-        return "OK!!"
+        return "news"
 
 
 if __name__ == "__main__":
