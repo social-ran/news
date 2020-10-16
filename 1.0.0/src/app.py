@@ -10,7 +10,7 @@ class News(AppBase):
 
         super().__init__(redis, logger, console_logger)
 
-    async def sendNews(self, title, context):
+    async def sendNews(self, myurl,title, context):
         try:
             from selenium import webdriver
             from selenium.webdriver.common.keys import Keys
@@ -26,7 +26,7 @@ class News(AppBase):
         browser = webdriver.Chrome(chrome_options=option)
         # browser=webdriver.Chrome()
 
-        browser.get("http://10.245.142.98:84")
+        browser.get(myurl)#http://10.245.142.98:84
         browser.set_window_size(1920, 1080)
         browser.maximize_window()
 
