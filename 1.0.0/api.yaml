@@ -11,6 +11,13 @@ actions:
   - name: sendNews
     description: send news
     parameters:
+      - name: myurl
+        description: url
+        required: true
+        multiline: false
+        example: "http://10.245.142.98:84"
+        schema:
+          type: string
       - name: title
         description: title of news
         required: true
